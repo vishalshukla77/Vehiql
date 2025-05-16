@@ -3,12 +3,20 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+<div className="pt-20 flex flex-col">
+ 
+<section>
 <div>
-  Hello ji
-  <br></br>
-  <Button variant="destructive">
-    Rom Rom bhaiyo
-  </Button>
+  <div>
+    <h1>
+      Find your Dream Car with Vehiql AI
+    </h1>
+  </div>
+</div>
+
+</section>
+
+
 </div>  
       
 

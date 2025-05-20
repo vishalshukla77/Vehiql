@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import {Button} from "../ui/button";
+
 import {
   SignedIn,
   SignedOut,
@@ -10,12 +11,14 @@ import {
   UserButton
 } from "@clerk/nextjs";
 import { ArrowLeft, CarFront, Heart, Layout } from 'lucide-react';
+import { checkUser } from '@/lib/checkUser';
 
 
 
 export default function Header({isAdminPage=false}) {
 
-  const isAdmin=false;
+const user=checkUser();
+  const isAdmin=user?.role==="ADMIN";
   return (
    <header className='fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b'>
     <nav className='mx-auto px-4 py-4 flex items-center justify-between '>
